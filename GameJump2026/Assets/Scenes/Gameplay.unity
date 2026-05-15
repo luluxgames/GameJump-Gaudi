@@ -322,6 +322,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383040fac912ac94f8f8af2e962dde54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1677581376 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6219875809134408472, guid: 5b4b97d76751f0b41883cd300638adab, type: 3}
+  m_PrefabInstance: {fileID: 2070015355}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1783809403
 GameObject:
   m_ObjectHideFlags: 0
@@ -828,12 +833,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 304632176879528796, guid: de18b976d40c11f4880ef3b22d905dfc, type: 3}
+      propertyPath: gameOver
+      value: 
+      objectReference: {fileID: 1677581376}
+    - target: {fileID: 304632176879528796, guid: de18b976d40c11f4880ef3b22d905dfc, type: 3}
       propertyPath: flowerSlider
       value: 
       objectReference: {fileID: 407686780}
     - target: {fileID: 304632176879528796, guid: de18b976d40c11f4880ef3b22d905dfc, type: 3}
       propertyPath: flowersTotal
-      value: 12
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4996094955264740273, guid: de18b976d40c11f4880ef3b22d905dfc, type: 3}
       propertyPath: m_Name
