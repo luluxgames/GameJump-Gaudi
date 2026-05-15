@@ -7,14 +7,8 @@ public class InputManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-            Inputs = new InputSystem_Actions();
-        }
-        else
-            Destroy(gameObject);
+        Instance = this;
+        Inputs = new InputSystem_Actions();
         SetPlayer();
     }
 
