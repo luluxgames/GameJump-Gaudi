@@ -3,7 +3,17 @@ guid: 9d62776d05f244d40b98570714d42d59
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leafs_Tall
+    second: {fileID: 2100000, guid: 62498707ed7e25547aa4acf6ff911db0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Petalos
+    second: {fileID: 2100000, guid: 2a7f43882b958304cb8bb4b59bc3aaee, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -33,7 +43,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.25
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -46,7 +56,7 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
@@ -88,7 +98,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 0.25
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

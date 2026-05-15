@@ -5,14 +5,11 @@ public class PotController : MonoBehaviour
 {
 	public List<GameObject> flowers;
 
-	public void AddFlower(int quantity = 1)
+	public void AddFlower()
 	{
-		for (int i = 0; i < quantity; i++)
-		{
-			flowers[i].SetActive(true);
-			flowers.RemoveAt(i);
-			GameManager.Instance.flowersCollected++;
-		}
+		flowers[0].SetActive(true);
+		flowers.RemoveAt(0);
+		GameManager.Instance.flowersCollected++;
 		CheckFlowers();
 	}
 	void CheckFlowers()

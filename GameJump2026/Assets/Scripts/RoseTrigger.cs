@@ -2,45 +2,55 @@ using UnityEngine;
 
 public class RoseTrigger : MonoBehaviour
 {
-    public bool isFlowerOnPossesion = false;
-    PlayerMovement player;
-    Rigidbody rb;
+	public bool isFlowerOnPossesion = false;
+	bool collected;
+	PlayerMovement player;
+	Rigidbody rb;
 
-    void Start()
-    {
-        if (isFlowerOnPossesion)
-        {
-            player = GetComponentInParent<PlayerMovement>();
-            rb = GetComponent<Rigidbody>();
-            rb.useGravity = false;
-            rb.isKinematic = true;
-        }
-    }
+	void Start()
+	{
+		if (isFlowerOnPossesion)
+		{
+			player = GetComponentInParent<PlayerMovement>();
+			rb = GetComponent<Rigidbody>();
+			rb.useGravity = false;
+			rb.isKinematic = true;
+		}
+	}
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (isFlowerOnPossesion)
-        {
-            if (other.CompareTag("Pot"))
-            {
-                player.flowersOnPosesion--;
-                player.flowerOnMouth.SetActive(false);
-                PotController pot = other.GetComponent<PotController>();
-                pot.AddFlower();
-            }
-        }
-        else
-        {
-            if (other.CompareTag("Player"))
-            {
-                player = other.GetComponent<PlayerMovement>();
-                if (!player.flowerOnMouth.activeSelf)
-                {
-                    player.flowersOnPosesion++;
-                    player.flowerOnMouth.SetActive(true);
-                    gameObject.SetActive(false);
-                }
-            }
-        }
-    }
+	private void OnEnable()
+	{
+		collected = false;
+	}
+
+	void OnTriggerEnter(Collider other)
+	{
+		if (collected)
+			return;
+		if (isFlowerOnPossesion)
+		{
+			if (other.CompareTag("Pot"))
+			{
+				collected = true;
+				player.flowersOnPosesion = 0;
+				PotController pot = other.GetComponent<PotController>();
+				pot.AddFlower();
+				gameObject.SetActive(false);
+			}
+		}
+		else
+		{
+			if (other.CompareTag("Player"))
+			{
+				player = other.GetComponent<PlayerMovement>();
+				if (!player.flowerOnMouth.activeSelf)
+				{
+					collected = true;
+					player.flowersOnPosesion++;
+					player.flowerOnMouth.SetActive(true);
+					Destroy(gameObject);
+				}
+			}
+		}
+	}
 }
