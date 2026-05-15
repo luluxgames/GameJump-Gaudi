@@ -27,12 +27,14 @@ public class Scenes: MonoBehaviour
         }
         else
         {
+            Time.timeScale = 1.0f;
             SceneManager.LoadScene("Gameplay");
         }
     }
 
     public void BackMenu()
     {
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene("MainMenu");
     }
 

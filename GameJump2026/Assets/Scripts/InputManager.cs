@@ -2,19 +2,25 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
-    public static InputManager Instance { get; private set; }
-    public static InputSystem_Actions Inputs { get; private set; }
+	public static InputManager Instance { get; private set; }
+	public static InputSystem_Actions Inputs { get; private set; }
 
-    void Awake()
-    {
-        Instance = this;
+	void Awake()
+	{
+		if (Instance != null)
+		{
+			Destroy(gameObject);
+			return;
+		}
+		Instance = this;
+        DontDestroyOnLoad(gameObject);
         Inputs = new InputSystem_Actions();
-        SetPlayer();
-    }
+		SetPlayer();
+	}
 
-    public void SetPlayer()
-    {
-        Inputs.Disable();
-        Inputs.Player.Enable();
-    }
+	public void SetPlayer()
+	{
+		Inputs.Disable();
+		Inputs.Player.Enable();
+	}
 }

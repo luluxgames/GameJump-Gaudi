@@ -20,9 +20,12 @@ public class WindowTrigger : MonoBehaviour
         {
             time -= Time.deltaTime;
             if (time < 0.0f)
+            {
                 time = 0.0f;
+                if (playerMovement.flowerOnMouth.activeSelf)
+                    playerMovement.SpawnRose();
+            }
             playerMovement.speed = 5.0f;
-            playerMovement.acceleration = 10.0f;
         }
         else
         {
@@ -30,7 +33,6 @@ public class WindowTrigger : MonoBehaviour
             if (time > staminaTimer)
                 time = staminaTimer;
             playerMovement.speed = 10.0f;
-            playerMovement.acceleration = 20.0f;
         }
         staminaFiller.fillAmount = time;
     }
