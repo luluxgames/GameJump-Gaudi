@@ -5,10 +5,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
 public class Scenes: MonoBehaviour
 {
-    public Image Image;
-    public TextMeshProUGUI Text;
+    public GameObject[] panels;
+    public Image EndPanelImage;
+    int currentPanel = 0;
 
     public void Play()
     {
@@ -18,7 +20,15 @@ public class Scenes: MonoBehaviour
     public void StartGame()
     {
 
-        SceneManager.LoadScene("Gameplay");
+        if (currentPanel < panels.Length)
+        {
+            panels[currentPanel].SetActive(true);
+            currentPanel++;
+        }
+        else
+        {
+            SceneManager.LoadScene("Gameplay");
+        }
     }
 
     public void BackMenu()
