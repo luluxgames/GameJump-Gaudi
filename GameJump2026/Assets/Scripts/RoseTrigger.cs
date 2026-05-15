@@ -4,11 +4,17 @@ public class RoseTrigger : MonoBehaviour
 {
     public bool isFlowerOnPossesion = false;
     PlayerMovement player;
+    Rigidbody rb;
 
     void Start()
     {
         if (isFlowerOnPossesion)
+        {
             player = GetComponentInParent<PlayerMovement>();
+            rb = GetComponent<Rigidbody>();
+            rb.useGravity = false;
+            rb.isKinematic = true;
+        }
     }
 
     void OnTriggerEnter(Collider other)

@@ -315,7 +315,7 @@ MonoBehaviour:
   speed: 10
   acceleration: 20
   flowersOnPosesion: 0
-  flowerOnMouth: {fileID: 0}
+  flowerOnMouth: {fileID: 7264365230544917356}
 --- !u!1 &7451230001081999900
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,6 +531,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 4c6d7f8155ca6ac4993b263b4361bfdc, type: 2}
+    - target: {fileID: 161004216336602702, guid: 7d12b09c6dbe38e4cb1851f4f7f4cbea, type: 3}
+      propertyPath: isFlowerOnPossesion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4935606829622102763, guid: 7d12b09c6dbe38e4cb1851f4f7f4cbea, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -576,6 +580,10 @@ PrefabInstance:
       value: --- ROSE
       objectReference: {fileID: 0}
     - target: {fileID: 7047358865437025746, guid: 7d12b09c6dbe38e4cb1851f4f7f4cbea, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047358865437025746, guid: 7d12b09c6dbe38e4cb1851f4f7f4cbea, type: 3}
       propertyPath: m_TagString
       value: Rose
       objectReference: {fileID: 0}
@@ -587,5 +595,10 @@ PrefabInstance:
 --- !u!4 &4711827880044723285 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4935606829622102763, guid: 7d12b09c6dbe38e4cb1851f4f7f4cbea, type: 3}
+  m_PrefabInstance: {fileID: 368462001326192318}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7264365230544917356 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7047358865437025746, guid: 7d12b09c6dbe38e4cb1851f4f7f4cbea, type: 3}
   m_PrefabInstance: {fileID: 368462001326192318}
   m_PrefabAsset: {fileID: 0}
