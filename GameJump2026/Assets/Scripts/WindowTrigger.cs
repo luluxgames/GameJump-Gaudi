@@ -16,12 +16,14 @@ public class WindowTrigger : MonoBehaviour
     void Start()
     {
         staminaFiller.fillAmount = staminaTimer;
+        staminaFiller.transform.parent.gameObject.SetActive(false);
     }
 
     void Update()
     {
         if (isInWindow)
         {
+            staminaFiller.transform.parent.gameObject.SetActive(true);
             if (!onceWaterdrops)
             {
                 waterdrops.Play();
@@ -49,7 +51,10 @@ public class WindowTrigger : MonoBehaviour
             oncePants = false;
             time += Time.deltaTime;
             if (time > staminaTimer)
+            {
+                staminaFiller.transform.parent.gameObject.SetActive(false);
                 time = staminaTimer;
+            }
             playerMovement.speed = 10.0f;
         }
         staminaFiller.fillAmount = time;
