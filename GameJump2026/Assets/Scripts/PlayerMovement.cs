@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 	public float speed = 5f;
 	public float rotSpeed = 10f;
 	public Rigidbody rb;
-	//public Animator meshAnim;
+	public Animator meshAnim;
 	public Transform visual;
 
 	[Header("RECOLLECTABLES")]
@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
 	{
 		moveInput = inputs.Player.Move.ReadValue<Vector2>();
 		moveDirection = new Vector3(moveInput.x, moveInput.y, 0f).normalized;
-		//meshAnim.SetFloat("speed", moveDirection.magnitude);
+		meshAnim.SetFloat("speed", moveDirection.magnitude);
 	}
 
 	void FixedUpdate()
