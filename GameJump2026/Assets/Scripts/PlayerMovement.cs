@@ -68,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
         float force = 8f;
         roseRb.AddForce(randomDirection * force, ForceMode.Impulse);
         flowerOnMouth.SetActive(false);
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.5f);
         roseCol.enabled = true;
         roseCol.excludeLayers = roseLayers;
         roseColParent.excludeLayers = roseLayers;
