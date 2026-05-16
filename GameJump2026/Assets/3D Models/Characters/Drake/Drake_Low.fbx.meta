@@ -3,7 +3,42 @@ guid: 332a7ea7fe39a204e9b405242559763e
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Teeth_dor_claw
+    second: {fileID: 2100000, guid: 55fbcd027c82c224b84eec82d58b70dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bird_details
+    second: {fileID: 2100000, guid: 1cf8a51282fe66342be2e8b78377e553, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: body
+    second: {fileID: 2100000, guid: 54b3f00942ec14e41939c1650f71a5c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eyes_oth
+    second: {fileID: 2100000, guid: 5b31ba463ba852742bb74af5c393c512, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mouth_head
+    second: {fileID: 2100000, guid: 5a78125f3d230c74cb9ec83be8baca4a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tongue
+    second: {fileID: 2100000, guid: 092280150adb5054a84a48a27629769f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wings
+    second: {fileID: 2100000, guid: c3f6530f53968324a8033f07e9035c7a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -88,7 +123,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.005
+    globalScale: 0.5
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
