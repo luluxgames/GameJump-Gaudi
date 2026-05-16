@@ -395,7 +395,7 @@ GameObject:
   - component: {fileID: 2040520070663178430}
   m_Layer: 6
   m_Name: --- WINDOW
-  m_TagString: Untagged
+  m_TagString: Glass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -453,6 +453,7 @@ MonoBehaviour:
   pants: {fileID: 0}
   staminaFiller: {fileID: 0}
   playerMovement: {fileID: 0}
+  audioPlayer: {fileID: 0}
 --- !u!1 &7980654940617962148
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,18 +547,6 @@ PrefabInstance:
     - target: {fileID: 2299632507763789239, guid: d68fd7d8e6bb3c94a80ca6bc6c0e4ab5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6561677747969494941, guid: d68fd7d8e6bb3c94a80ca6bc6c0e4ab5, type: 3}
-      propertyPath: m_Size.x
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6561677747969494941, guid: d68fd7d8e6bb3c94a80ca6bc6c0e4ab5, type: 3}
-      propertyPath: m_Size.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6561677747969494941, guid: d68fd7d8e6bb3c94a80ca6bc6c0e4ab5, type: 3}
-      propertyPath: m_Center.z
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

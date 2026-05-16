@@ -7,6 +7,7 @@ public class WindowTrigger : MonoBehaviour
     public ParticleSystem pants;
     public Image staminaFiller;
     public PlayerMovement playerMovement;
+    public RandomAudioPlayer audioPlayer;
     bool isInWindow = false;
     bool onceWaterdrops = false;
     bool oncePants = false;
@@ -35,6 +36,7 @@ public class WindowTrigger : MonoBehaviour
                 if (!oncePants)
                 {
                     pants.Play();
+                    pants.gameObject.GetComponent<AudioSource>().Play();
                     oncePants = true;
                 }
                 time = 0.0f;
@@ -42,6 +44,7 @@ public class WindowTrigger : MonoBehaviour
                     playerMovement.LoseRose();
             }
             playerMovement.speed = 5.0f;
+            audioPlayer.isGlass = true;
         }
         else
         {
@@ -56,6 +59,7 @@ public class WindowTrigger : MonoBehaviour
                 time = staminaTimer;
             }
             playerMovement.speed = 10.0f;
+            audioPlayer.isGlass = false;
         }
         staminaFiller.fillAmount = time;
     }
