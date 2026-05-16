@@ -2,7 +2,12 @@ using UnityEngine;
 
 public class Fireball : MonoBehaviour
 {
-	public float speed = 2f;
+	public float speed = 2.0f;
+
+	void Start()
+	{
+		Destroy(gameObject, 25.0f);
+	}
 
 	void Update()
 	{
