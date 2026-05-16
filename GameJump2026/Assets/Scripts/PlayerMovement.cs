@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -13,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
 	public int flowersOnPosesion = 0;
 	public GameObject flowerOnMouth;
 	public GameObject flowerPrefab;
+	public LayerMask lostRoseLayers;
+	public LayerMask roseLayers;
 
 	InputSystem_Actions inputs;
 
@@ -46,16 +49,28 @@ public class PlayerMovement : MonoBehaviour
 		visual.rotation = Quaternion.Slerp(visual.rotation, targetRotation, rotSpeed * Time.fixedDeltaTime);
 	}
 
-	public void SpawnRose()
+	public void LoseRose()
 	{
 		if (flowerOnMouth.activeSelf)
-		{
-            GameObject rose = Instantiate(flowerPrefab, flowerOnMouth.transform.position, flowerOnMouth.transform.rotation);
-            Vector3 randomDirection = new Vector3(Random.Range(-1f, 1f), Random.Range(0.2f, 1f), 0.0f).normalized;
-            Rigidbody roseRb = rose.GetComponent<Rigidbody>();
-            float force = 8f;
-            roseRb.AddForce(randomDirection * force, ForceMode.Impulse);
-            flowerOnMouth.SetActive(false);
-        }
+			StartCoroutine(WaitForPickable());
+    }
+
+	IEnumerator WaitForPickable()
+	{
+        GameObject rose = Instantiate(flowerPrefab, flowerOnMouth.transform.position, flowerOnMouth.transform.rotation);
+        Collider roseCol = rose.GetComponent<Collider>();
+        Collider roseColParent = rose.GetComponentInParent<Collider>();
+		roseCol.enabled = false;
+        roseCol.excludeLayers = lostRoseLayers;
+        roseColParent.excludeLayers = lostRoseLayers;
+        Vector3 randomDirection = new Vector3(Random.Range(-1f, 1f), Random.Range(0.2f, 1f), 0.0f).normalized;
+        Rigidbody roseRb = rose.GetComponent<Rigidbody>();
+        float force = 8f;
+        roseRb.AddForce(randomDirection * force, ForceMode.Impulse);
+        flowerOnMouth.SetActive(false);
+        yield return new WaitForSeconds(0.25f);
+        roseCol.enabled = true;
+        roseCol.excludeLayers = roseLayers;
+        roseColParent.excludeLayers = roseLayers;
     }
 }

@@ -19,7 +19,7 @@ public class Fireball : MonoBehaviour
 		if (other.CompareTag("Player"))
 		{
 			PlayerMovement player = other.GetComponent<PlayerMovement>();
-			player.SpawnRose();
+			player.LoseRose();
 			Destroy(gameObject);
 		}
 	}
