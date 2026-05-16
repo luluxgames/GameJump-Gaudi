@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
 	public static GameManager Instance { get; private set; }
 	public GameObject gameOver;
-	public Slider flowerSlider;
+	public TextMeshProUGUI flowerText;
 	public int flowersTotal = 3;
 	public int flowersCollected = 0;
 
@@ -15,7 +16,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
 	{
-		flowerSlider.maxValue = flowersTotal;
+        flowerText.text = flowersTotal.ToString();
 		Instance = this;
 
 
@@ -27,23 +28,15 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
 	{
-		flowerSlider.value = flowersCollected;
-		if(flowersCollected==flowersTotal)
+        flowerText.text = (flowersTotal-flowersCollected).ToString();
+        if (flowersCollected==flowersTotal)
 		{
 			Time.timeScale = 0;
 			gameOver.SetActive(true);
 
             showGameOver = true;
         }
-
-
         if (showGameOver)
-        {
-            gameOverCanvas.alpha = Mathf.MoveTowards(
-                gameOverCanvas.alpha, 1f,
-                fadeDuration * Time.unscaledDeltaTime
-            );
-        }
-
+            gameOverCanvas.alpha = Mathf.MoveTowards(gameOverCanvas.alpha, 1f, fadeDuration * Time.unscaledDeltaTime);
     }
 }
