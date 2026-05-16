@@ -8,9 +8,19 @@ using UnityEngine.UI;
 
 public class Scenes: MonoBehaviour
 {
-    public GameObject[] panels;
+    public CanvasGroup[] canvasGroups;
     public Image EndPanelImage;
     int currentPanel = 0;
+
+    public float fadeDuration = 2f;
+
+    private void Start()
+    {
+        for (int i = 0; i < canvasGroups.Length; i++)
+        {
+            canvasGroups[i].alpha = 0f;
+        }
+    }
 
     public void Play()
     {
@@ -19,10 +29,9 @@ public class Scenes: MonoBehaviour
 
     public void StartGame()
     {
-
-        if (currentPanel < panels.Length)
+        if (currentPanel < canvasGroups.Length)
         {
-            panels[currentPanel].SetActive(true);
+            StartCoroutine(FadePanel(canvasGroups[currentPanel]));
             currentPanel++;
         }
         else
@@ -41,5 +50,21 @@ public class Scenes: MonoBehaviour
     public void Exit()
     {
         Application.Quit();
+    }
+
+    IEnumerator FadePanel(CanvasGroup panel)
+    {
+        float time = 0f;
+
+        while (time < fadeDuration)
+        {
+            time += Time.deltaTime;
+
+            panel.alpha = Mathf.Lerp(0f, 1f, time / fadeDuration);
+
+            yield return null;
+        }
+
+        panel.alpha = 1f;
     }
 }

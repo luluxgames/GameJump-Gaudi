@@ -6,6 +6,7 @@ public class RoseTrigger : MonoBehaviour
 	bool collected;
 	PlayerMovement player;
 	Rigidbody rb;
+	Collider col;
 
 	void Start()
 	{
@@ -13,7 +14,8 @@ public class RoseTrigger : MonoBehaviour
 		{
 			player = GetComponentInParent<PlayerMovement>();
 			rb = GetComponent<Rigidbody>();
-			rb.useGravity = false;
+			col = GetComponent<Collider>();
+            rb.useGravity = false;
 			rb.isKinematic = true;
 		}
 	}
@@ -40,9 +42,11 @@ public class RoseTrigger : MonoBehaviour
 		}
 		else
 		{
-			if (other.CompareTag("Player"))
+			if (other.CompareTag("Head"))
 			{
 				player = other.GetComponent<PlayerMovement>();
+				if (player == null)
+                    player = other.GetComponentInParent<PlayerMovement>();
 				if (!player.flowerOnMouth.activeSelf)
 				{
 					collected = true;

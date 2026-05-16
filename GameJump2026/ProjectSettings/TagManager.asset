@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Rose
   - Pot
+  - Head
   layers:
   - Default
   - TransparentFX
@@ -14,7 +15,7 @@ TagManager:
   - Water
   - UI
   - traspassable
-  - 
+  - player
   - 
   - 
   - 

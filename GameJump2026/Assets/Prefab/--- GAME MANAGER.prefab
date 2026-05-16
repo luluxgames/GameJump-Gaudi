@@ -57,5 +57,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c62f78d60319b4eb9b2c12088a7c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOver: {fileID: 0}
+  flowerSlider: {fileID: 0}
   flowersTotal: 3
   flowersCollected: 0
+  gameOverCanvas: {fileID: 0}
+  fadeDuration: 3
