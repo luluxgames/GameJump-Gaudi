@@ -23,7 +23,7 @@ public class WindowTrigger : MonoBehaviour
             {
                 time = 0.0f;
                 if (playerMovement.flowerOnMouth.activeSelf)
-                    playerMovement.SpawnRose();
+                    playerMovement.LoseRose();
             }
             playerMovement.speed = 5.0f;
         }
