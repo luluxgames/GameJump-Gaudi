@@ -8,16 +8,20 @@ public class WindowTrigger : MonoBehaviour
     public Image staminaFiller;
     public PlayerMovement playerMovement;
     public RandomAudioPlayer audioPlayer;
+
     bool isInWindow = false;
     bool onceWaterdrops = false;
     bool oncePants = false;
     float staminaTimer = 1.0f;
     float time = 1.0f;
+    float originalSpeed;
+    bool speedReduced = false;
 
     void Start()
     {
         staminaFiller.fillAmount = staminaTimer;
         staminaFiller.transform.parent.gameObject.SetActive(false);
+        originalSpeed = playerMovement.speed;
     }
 
     void Update()
@@ -30,7 +34,7 @@ public class WindowTrigger : MonoBehaviour
                 waterdrops.Play();
                 onceWaterdrops = true;
             }
-            time -= Time.deltaTime*0.5f;
+            time -= Time.deltaTime * 0.5f;
             if (time < 0.0f)
             {
                 if (!oncePants)
@@ -43,7 +47,13 @@ public class WindowTrigger : MonoBehaviour
                 if (playerMovement.flowerOnMouth.activeSelf)
                     playerMovement.LoseRose();
             }
-            playerMovement.speed = 5.0f;
+            if (!speedReduced)
+            {
+                originalSpeed = playerMovement.speed;
+                playerMovement.speed *= 0.5f;
+                speedReduced = true;
+            }
+
             audioPlayer.isGlass = true;
         }
         else
@@ -58,7 +68,11 @@ public class WindowTrigger : MonoBehaviour
                 staminaFiller.transform.parent.gameObject.SetActive(false);
                 time = staminaTimer;
             }
-            playerMovement.speed = 10.0f;
+            if (speedReduced)
+            {
+                playerMovement.speed = originalSpeed;
+                speedReduced = false;
+            }
             audioPlayer.isGlass = false;
         }
         staminaFiller.fillAmount = time;

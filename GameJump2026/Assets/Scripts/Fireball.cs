@@ -19,6 +19,7 @@ public class Fireball : MonoBehaviour
 		if (other.CompareTag("Player"))
 		{
 			PlayerMovement player = other.GetComponent<PlayerMovement>();
+			player.transform.parent.GetComponent<AudioSource>().Play();
 			player.LoseRose();
 			Destroy(gameObject);
 		}

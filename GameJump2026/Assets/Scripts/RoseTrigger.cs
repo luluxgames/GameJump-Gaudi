@@ -3,6 +3,7 @@ using UnityEngine;
 public class RoseTrigger : MonoBehaviour
 {
 	public bool isFlowerOnPossesion = false;
+	AudioSource audSource;
 	bool collected;
 	PlayerMovement player;
 	Rigidbody rb;
@@ -10,9 +11,11 @@ public class RoseTrigger : MonoBehaviour
 
 	void Start()
 	{
-		if (isFlowerOnPossesion)
+        if (isFlowerOnPossesion)
 		{
-			player = GetComponentInParent<PlayerMovement>();
+            audSource = GetComponent<AudioSource>();
+            audSource.Play();
+            player = GetComponentInParent<PlayerMovement>();
 			rb = GetComponent<Rigidbody>();
 			col = GetComponent<Collider>();
             rb.useGravity = false;
@@ -20,7 +23,7 @@ public class RoseTrigger : MonoBehaviour
 		}
 	}
 
-	private void OnEnable()
+	void OnEnable()
 	{
 		collected = false;
 	}
@@ -50,7 +53,7 @@ public class RoseTrigger : MonoBehaviour
 				if (!player.flowerOnMouth.activeSelf)
 				{
 					collected = true;
-					player.flowersOnPosesion++;
+                    player.flowersOnPosesion++;
 					player.flowerOnMouth.SetActive(true);
 					Destroy(gameObject);
 				}
