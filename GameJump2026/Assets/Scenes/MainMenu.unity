@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: eacf08f83af0e6d40ba20b0354d1afc1, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 7fcd2adade68f4b43852a4cedc378082, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -8009,10 +8009,6 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
-    - target: {fileID: 2754765265151571454, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2757179383696776268, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -8280,10 +8276,6 @@ PrefabInstance:
     - target: {fileID: 2971684364506919911, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 2976757043972700060, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2991256052197854711, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8657,10 +8649,6 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
-    - target: {fileID: 3274825385789070443, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3276457417221451093, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -8812,10 +8800,6 @@ PrefabInstance:
     - target: {fileID: 3359400862722757714, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 3368560518860480531, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3368796680512109926, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -11057,10 +11041,6 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
-    - target: {fileID: 5010143212630166174, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5013641495575983974, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -11336,10 +11316,6 @@ PrefabInstance:
     - target: {fileID: 5220338336964301490, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 5221049457567023212, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
-      propertyPath: flowers.Array.size
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5232146329380023764, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -12593,10 +12569,6 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
-    - target: {fileID: 6128753687300780197, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6131093173969551112, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -12640,10 +12612,6 @@ PrefabInstance:
     - target: {fileID: 6159083063877601494, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 6160288842643650696, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6160454897231087877, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -16804,20 +16772,6 @@ PrefabInstance:
     - {fileID: 4012105341036894191, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
     - {fileID: 6200338475669555676, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
     - {fileID: 6628248659237725398, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
-    - {fileID: 4850377626050295364, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
-    - {fileID: 7176266946201635416, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
-    - {fileID: 8888293057662636875, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
-    - {fileID: 9068638812169555727, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
-    - {fileID: 3730904781858754778, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
-    - {fileID: 8294811863530844259, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
-    - {fileID: 7876911499827328308, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
-    - {fileID: 5221049457567023212, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
-    - {fileID: 4338261957162711652, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
-    - {fileID: 1526535629283498490, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
-    - {fileID: 6087483870546593942, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
-    - {fileID: 1648981253063288194, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
-    - {fileID: 9113633355762840884, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
-    - {fileID: 625760109880647893, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
     m_RemovedGameObjects:
     - {fileID: 7391970054495712314, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
     - {fileID: 3331008988238540575, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
@@ -16835,13 +16789,6 @@ PrefabInstance:
     - {fileID: 3724353956811046893, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
     - {fileID: 3799135646051028299, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
     - {fileID: 4404546401573435080, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
-    - {fileID: 7052913801213074184, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
-    - {fileID: 8172577633784766771, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
-    - {fileID: 4162811022884141590, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
-    - {fileID: 6919429037267654061, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
-    - {fileID: 1896799721276132286, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
-    - {fileID: 1846417488729831366, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
-    - {fileID: 2967120972445862746, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44a72a65af2c2b947857fdfcc29ea806, type: 3}
