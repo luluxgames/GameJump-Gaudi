@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
 	{
-        flowerText.text = (flowersTotal-flowersCollected).ToString();
+        flowerText.text = (flowersCollected + "/" + flowersTotal).ToString();
         if (flowersCollected==flowersTotal)
 		{
 			Time.timeScale = 0;
