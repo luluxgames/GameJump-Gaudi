@@ -7,6 +7,7 @@ TagManager:
   - Rose
   - Pot
   - Head
+  - Glass
   layers:
   - Default
   - TransparentFX
