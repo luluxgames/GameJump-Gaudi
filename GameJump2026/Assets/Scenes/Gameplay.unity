@@ -1357,7 +1357,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 304632176879528796, guid: de18b976d40c11f4880ef3b22d905dfc, type: 3}
       propertyPath: flowersTotal
-      value: 14
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 304632176879528796, guid: de18b976d40c11f4880ef3b22d905dfc, type: 3}
       propertyPath: gameOverCanvas
