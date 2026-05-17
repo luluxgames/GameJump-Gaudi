@@ -23,6 +23,7 @@ public class RandomAudioPlayer : MonoBehaviour
             selectedList = audioClips;
         int randomIndex = Random.Range(0, selectedList.Length);
         audioSource.clip = selectedList[randomIndex];
+        audioSource.pitch = Random.Range(0.6f, 1.4f);
         audioSource.Play();
     }
 }
