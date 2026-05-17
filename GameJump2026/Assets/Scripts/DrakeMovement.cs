@@ -23,8 +23,11 @@ public class DrakeMovement : MonoBehaviour
         float distanceY = player.position.y - transform.position.y;
         if (Mathf.Abs(distanceY) <= stopDistanceY)
         {
-            StartCoroutine(AttackRoutine());
-            return;
+            if (GameManager.Instance.flowersCollected >= 1)
+            {
+                StartCoroutine(AttackRoutine());
+                return;
+            }
         }
         Vector3 targetPos = new Vector3(transform.position.x, player.position.y, transform.position.z);
         transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
