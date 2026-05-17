@@ -22552,8 +22552,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 125, y: 25, z: 100}
-  m_Center: {x: 0, y: 100, z: 0}
+  m_Size: {x: 125, y: 28.734444, z: 100}
+  m_Center: {x: 0, y: 98.13278, z: 0}
 --- !u!65 &7894214418606261914
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29790,9 +29790,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7918335002988649766, guid: 7c0c82b6cd0c347418c8eb3c171ae6e1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: -876546973899608171, guid: 84ac80749a2dabf47b1cc66f8f3563d1, type: 3}
     - target: {fileID: -7029948723529949830, guid: 7c0c82b6cd0c347418c8eb3c171ae6e1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -4292154010595695564, guid: 7c0c82b6cd0c347418c8eb3c171ae6e1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: -3215555783603854218, guid: 7c0c82b6cd0c347418c8eb3c171ae6e1, type: 3}
       propertyPath: m_StaticEditorFlags
