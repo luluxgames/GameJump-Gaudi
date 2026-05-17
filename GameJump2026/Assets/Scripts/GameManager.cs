@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour
 	public static GameManager Instance { get; private set; }
 	public GameObject gameOver;
 	public TextMeshProUGUI flowerText;
+
+    public GameObject normas;
+
 	public int flowersTotal = 3;
 	public int flowersCollected = 0;
 
@@ -23,6 +26,18 @@ public class GameManager : MonoBehaviour
         gameOverCanvas.alpha = 0f;
         gameOver.SetActive(false);
 
+    }
+
+    private void Start()
+    {
+        Time.timeScale = 0f;
+        normas.SetActive(true);
+    }
+
+    public void ExitNormas()
+    {
+        Time.timeScale = 1f;
+        normas.SetActive(false);
     }
 
     // Update is called once per frame
